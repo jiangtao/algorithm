@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>search</title>
+</head>
+<div id="box">
+  <ul class="list">
+    <li class="class1">1</li>
+    <li class="class2">2</li>
+    <li class="class3">3</li>
+    <li class="class4">4</li>
+  </ul>
+</div>
+<body>
+  <script src="./dfs.js"></script>
+  <script src="./bfs.js"></script>
+  <script>
+    window.dfs(document.getElementById('box'), 'children', function(node, count) {
+      console.log(node, count)
+    })
+    
+    window.bfs(document.getElementById('box'), 'children', function(node, count) {
+      console.log(node, count)
+    })
+  </script>
+</body>
+</html>
