@@ -17,17 +17,15 @@
       if(!head.node[childKey].length) continue
       
       children = head.node[childKey]
-      
-      children = Array.prototype.slice.call(children, 0)
-      
-      children.forEach(function(ele, index, arr) {
+    
+      for(var i = 0, len = children.length; i < len; i++) {
         depth++
         queue.push({
-          node: ele,
+          node: children[i],
           depth: depth
         })
-      })
-      
+      }
+    
     }
   }
 
